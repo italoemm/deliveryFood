@@ -6,7 +6,7 @@ Simple Web application developed using Native HTML/CSS.
 
 It was made following the UDEMY course "Build Responsive Real World Websites with HTML5 and CSS3" <b>deployed in my way</b>.
 
-The code was havely commented, So that it can be very undantandble 
+The code was heavily commented, So that it can be very undantandble 
 
 # Tools/Frameworks used:
 <ul>
