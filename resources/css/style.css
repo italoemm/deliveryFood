@@ -1,0 +1,668 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+    color: #555; /*text colort*/
+    font-family: 'Lato','Arial','sans-serif';
+    font-weight: 300; /* how much thick it is*/
+    font-size: 20px;
+    text-rendering: optimizeLegibility; /* grant that everythig is going be in good quality*/
+}
+
+
+/*-----------------REUSABLE---------------------*/
+
+.row{
+    max-width: 1140px; /* comprimento/width of row */
+    margin: 0 auto; /* or margin: 0 auto 0 auto*/
+}
+
+
+section{
+    padding: 80px 0; /* Put more space on top and bottom and nothing in left and right...its padding cause I wanna
+                      space inside the section yet*/
+    
+}
+.box{
+    padding: 1%;
+}
+
+.clearfix{zoom: 1}       
+.clearfix:after{
+    content: '.';
+    clear:both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    }
+                           /* it's going clear a float after a element , sometimes when you add a new element 
+                           after the  previous element is be usig a float , this new element are going starting in position of the previous element, cause the features of previous elements are ignored, that's why the height of previous elements is 0, so making it.... we avoid to happen this situation, we get back the features of elements after using "clear fix"
+                           we have to put on in elements parents like "ul"" that its childrens "li" are usig float we have to do it "
+                           <ul class="UlMeals clearfix">" */
+    
+
+
+/*---------------------------------------------*/
+/*-----------------HEADINDGS--------------------*/
+
+h1,
+h2,
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1{
+      margin: 0; /*remove the margin*/
+      margin-bottom: 20px;
+      font-size: 240%; /* I'm puttin porcentagem cause all the code of this project has 20px ,
+                        so putting porcentage 200% above it, its going have 40px, if I want to change the size of words I change only in html brackets */
+      color: #fff;
+      word-spacing: 4px; /*space between words*/
+      letter-spacing: 1px;/*space between char*/
+}
+
+h2{
+    font-size: 180%;
+    text-align: center;
+    word-spacing: 1px;
+    margin-bottom: 30px;
+    
+}
+
+h2:after{
+    display: block;
+    height: 2px;
+    width: 100px;
+    content: " ";
+    background-color: #e67e22;
+   /* margin: auto;  center the object....set the same margin of its father or push from left left*/
+    margin-left: 45%;
+    margin-top: 30px;
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 20px;
+}
+
+/*---------------------------------------------*/
+/*--------------PARAGRAPH----------------------*/
+
+.long-copy{
+    line-height: 145%; /*spac between a line and other....the spaces are insed*/
+    width: 70%;
+    margin-left: 15%;  /* basically I'm pushing 15 porcentage from left size of window*/
+}
+
+.box p {
+   font-size: 90%;
+   line-height: 145%;
+
+    
+}
+
+/*---------------------------------------------*/
+/*-----------------ICONS----------------------*/
+
+.icon-big{
+    font-size: 350%;
+    display: block;  /* I choose only block cause I want the icon above the text */
+    color: #e67e22;
+    margin-bottom: 10px;
+    text-align:center;       /* text align can be used for text, inline,blocks and images
+                                OR margin-left: 30%.... I use porcentage cause I wanna 30% of the font-size be in margin so , its going 
+                                pushing the image from left until margin reach 30% of block*/
+}
+
+
+
+.icon-small{
+    display: inline-block;   /* I choose only inline-block cause I want the icon beside the text */
+    width: 30px;            /* if I not set the width , each icons are going have its unic width*/
+    margin-right: 5px;
+    color: #e67e22;
+    text-align: center;     /* as I put a container now I can use text-align*/
+    font-size: 120%;        /* it's a icon font , so I can set up its sizes with font size, increase 20%*/
+    
+/* If my icon has a text next to you, and my icons is desalign I make it to align itself*/
+    line-height: 120%;
+    vertical-align:middle;
+    margin-top: -4px;
+}
+/*---------------------------------------------*/
+/*-----------------BUTTONS---------------------*/
+          
+.btn,
+input[type=submit]{ 
+    display: inline; /* make the button button be have has a contatiner, padding etc. like div*/
+    padding: 5% 15%;
+    font-weight: 300;
+    text-decoration: none ;/* remove that text with a underline that represent a text with a link to somewhere*/ 
+    border-radius: 200px; /* set up circle on padding*/
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* set up a delay to change the color and color of background*/
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{                        /* link is original text, visited after clicked, hover after pass mouse above*/
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 10px;
+    
+}
+
+.btn-full:hover,
+input[type=submit]:hover{
+    background-color:#b05d14;           /* whenever I hover the mouse I only want to change the color of backgroud*/
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+ }
+
+.btn-ghost:hover{
+    border: 1px solid #e67e22;
+    background-color: #e67e22;
+    color: #fff;
+ }
+/*---------------------------------------------*/
+/*--------------------LINKS-------------------*/
+
+.section-cities a:link,
+.section-cities a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+
+.section-cities a:hover{
+    color: #555;
+    border-bottom: 1px solid transparent; /* without border*/
+}
+
+
+
+/*---------------------------------------------*/
+/*-----------------HEADERS-MAIN---------------*/
+header{
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.7)),to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*set the image and make it transparent*/
+   /* height: 100%;  it's means 100% of viewport*/
+    background-size: cover ; /* tell the browser that we want see the whole image --cover all window with image*/
+    background-position: center; /*set up image always in a center position*/
+    background-attachment: fixed;
+}
+
+.col-bt-header{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    width: 200px;
+}
+
+.hero-text-box{ 
+    /*  position: absolute;  cause we need to set the position in a  window* ..not automatically by grind
+    width: 1140x;
+    top: 60%;  now I can determine the position of container
+    left: 37.5%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    padding-top: 20%;
+}
+
+/*---------------------------------------------*/
+/*------------NORMAL MAIN - NAVAGATION ----------*/
+
+.UlNav-main{
+    margin: 40px;
+    float: right;
+    list-style: none; 
+}
+
+.UlNav-main li{ 
+    display: inline-block; /* its going grant that they are going be side by side for all element of list*/
+    margin-left: 40px;
+}
+
+.UlNav-main li a:link,
+.UlNav-main li a:visited{ /* its be set up gor all list linked*/
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 90%;
+    padding-bottom: 2px;
+}
+.UlNav-main li a:hover{
+   border-bottom: 1px solid #e67e22; /* its be set up gor all list linked*/
+}
+
+.logo{
+    margin-top: 40px;
+    height: 100px;
+    width: auto;
+    float: left; /* is to to put the img on left side and remove all margin, otherwise if you set back*/
+}
+
+.logo-black{ display: none}
+
+
+
+/*---------------------------------------------*/
+/*------------STICKY MAIN - NAVAGATION ----------*/
+/*  here I'm saying that I'will take the same navation and use later...in other words, I'll set on Jquery a command that check when I scroll down near  the section features I'll active the sticky menu, so it's going appear...so for it I have to download the waypoint from imakewebthings.com/waypoints*/
+
+.sticky{
+    background-color: rgba(250, 250, 250, 250);
+    position: fixed; /*if I wanna to fixe I hava to set the width , otherwise it's going set the size of container accourding the objects inside*/
+    top: 0;
+    left: 0;
+    width: 100%; /* I wanna use all space of row */ 
+    font-size: 80%;
+    z-index: 9999; /* it's going grant that the nav will going be above all the elements */
+    -webkit-box-shadow: 2px 2px 4px #989898;
+    box-shadow: 2px 2px 4px #989898;
+ 
+} 
+
+.sticky .UlNav-main{
+    margin: 20px;
+}
+
+.sticky .UlNav-main li a:link,
+.sticky .UlNav-main li a:visited{ /* its be set up gor all list linked*/
+    color: #555;
+    padding-bottom: 2px;
+}
+
+.sticky .UlNav-main li a:hover{
+   border-bottom: 1px solid #e67e22; /* its be set up gor all list linked*/
+}
+
+.sticky .logo{display: none;}
+
+.sticky .logo-black{
+    height: 50px;
+    width: auto;
+    display: block;
+    margin-top: 4px;
+    margin-left: 2px;
+    float: left;
+    
+}
+
+/*---------------------------------------------*/
+/*------------ MAIN - NAVAGATION 480px----------*/
+
+.nav-480px{
+    display: none; /*cause I don't wanna appear in other screen only for width of 480px*/
+    float:right;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.sticky .nav-480px{
+    margin-top: 20px
+}
+
+
+.nav-480px i{
+    font-size: 200%;
+    color: #fff;
+}
+
+.sticky .nav-480px i{
+    color: #000000;
+ }
+
+/*---------------------------------------------*/
+/*--------SECTION-MEALS-----------------------*/
+
+.section-meals{
+  padding: 0;
+}
+
+
+
+/*----------MEALS-LISTS-----------------------*/
+.UlMeals{
+    list-style: none;
+    width: 100%;
+}
+.UlMeals li {
+    display: block;
+    width: 25%; /* I wanna 25 % cause the total list has 100%, but as I have
+                 4 elements and I wanna fill all the fields of list so, 25%*/
+    float: left;
+
+}
+
+.meal-photo{ /*<figure>*/
+    width: 100%; /* it means that its going have 100 porcentage of its size above the size give to it that is                   25%*/
+    margin: 0;
+    overflow: hidden; /* as I've grown the imagem in "meal-photo img", the image is going be more big of its container that is <figure>, so to solve this problem, we are going set the parts that are going pass through the container be hidden*/
+}
+
+.meal-photo img{ /* its going grant that the image will complete the size of the size set up in <figure>*/
+   width: 100%; 
+   height: auto;
+   -webkit-transform: scale(1.15);
+   transform: scale(1.15); /*  make a zoom on its image about 15%*/
+   opacity: 0.7; /*make it opacity in 30 porcentage     */
+   -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+   transition: opacity 0.5s, -webkit-transform 0.5s;
+   transition: transform 0.5s, opacity 0.5s;
+   transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+.meal-photo img:hover{
+   -webkit-transform: scale(1.03);
+   transform: scale(1.03); /* go back to original size 1.0, but you can adjust according the container, for fill all the container I put 1.03*/
+   opacity: 1; /*go back to original opacity*/
+}
+
+/*---------------------------------------------*/
+/*--------SECTION-HOW IT WORKS----------------*/
+
+ .section-steps{
+        background-color: #fafafa;
+    }
+
+.steps-box:first-child{ /* step that is image*/
+    text-align: right; 
+    padding-right: 3%;
+    margin-top: 30px
+}
+
+.steps-box:last-child{
+ padding-left: 3%;
+ margin-top: 70px
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.work-steps{
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+.work-steps:last-of-type{
+    margin-bottom: 100px;  /*but the last work steps I wanna a space different*/
+}
+
+.work-steps div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    font-size: 150%;
+    padding: 5px;
+    float: left;
+    margin-right: 25px
+}
+
+.btn-app img{
+    height: 50px; /* image  are going have the same height 50px*/
+    width: auto;
+    margin-right: 15px;
+    margin-left: 25px;
+}
+
+/*---------------------------------------------*/
+/*------------SECTION-CITIES------------------*/
+
+.box img{
+    width: 100%;          /* I'm putting 100 porcentage cause I already now the width of each image, remember ...when we are using*/  
+    height: auto;         /*"col span-1-of-4" I know that the width of each "div" is 25% above the total width of row , so pretty much is*/
+    margin-bottom: 15px;  /*25px divided to 4 container*/
+}
+
+.cities-box{
+    margin-bottom: 5px;
+}
+
+/*---------------------------------------------------*/
+/*------------SECTION-TESTIMONIALS------------------*/
+
+.section-testimonial{
+    /*height: 100vh;  it's means 100% of viewport
+    background-size: cover ; tell the browser that we want see the whole image --cover all window with image
+    background-position: center; set up image always in a center position*/
+    
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.8)),to(rgba(0, 0, 0, 0.8))) , url(img/2.jpg);
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)) , url(img/2.jpg);
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+blockquote{
+   padding: 2px;
+   font-style: italic;
+   line-height: 145%;
+   margin-top: 40px;
+    position:relative; /*If I not put it, the "before" brackets is not going appear*/
+}
+
+blockquote:before {
+    display: block;
+    content: "\201c";
+    font-size: 500%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+ 
+}
+
+cite{
+    display: block; /*whenever you add a text with a image is better join them with a block*/ 
+    font-size: 90%;
+    margin-top: 25px;
+}
+
+cite img{
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle; /* that's why I put "display block" now I can put all elements that are inside the block in middle of block*/
+    
+}
+
+/*---------------------------------------------------*/
+/*----------------SECTION-SIGN UP-------------------*/
+.section-sign-up {
+    background-color: #e3e3e3;
+}
+
+.plan-box { 
+    margin-top: 5px;
+    background-color: #fff; 
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 8px #989898;
+    box-shadow: 2px 2px 8px #989898;
+}
+
+.plan-box div { /* for all divs*/
+    border-bottom: 1px solid  #e67e22;
+    padding: 20px 10px;
+ 
+}
+
+.plan-price {
+    font-size: 250%;
+    color: #e67e22;
+    font-weight: 30%;
+    margin-bottom: 5px;
+}
+
+.plan-price span{
+    font-size: 30%;  /* this 30% doesnt have to do with the principal font size from "HTML" , its have to do with its parent tha is "plan-price"*/
+}
+
+.plan-meal{
+    font-size: 80%;
+    font-weight: 300;
+}
+.plan-box ul{ /* for all unOrdered list*/
+   list-style: none; 
+}
+.plan-box li{ /* for all list*/
+   line-height: 145%; 
+}
+.plan-box div:first-child{
+  background-color: #f8f8f8;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.plan-box div:last-child{
+  border-bottom: 0;
+  text-align: center;
+ /* or width: 55%;
+  margin-left: 22.5% */
+}
+
+/*---------------------------------------------------*/
+/*----------------SECTION-CONTACT--------------------*/
+
+/*OR contact-form{
+}*/
+.section-contact form {
+    width: 60%;
+    margin-left: 20%;
+    /*OR margin: 0 auto;{
+}*/
+    
+}
+
+input[type=text], /*specfic input to edit, I could use its ID, but in this way if I would want use agan a input with this type , its going be automatically edited*/
+input[type=email],
+select,
+textarea{
+    width: 100%; /* complete all container area with text area*/
+    padding: 7px; /* increase a little the textarea inside*/
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #6f6f6f;
+}
+textarea{
+    height: 100px;
+}
+/* for the buttom submit I'm going get the same custom of all button that are in project, "<a src=#>" so
+I going to put input[type=submit] in the same custom of ".btn-full" and ".btn""*/
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+
+/*---------------------------------------------------*/
+/*--------------------FOOTER-------------------------*/
+
+footer{
+    background-color: #484848;
+    padding: 40px 0;
+}
+
+footer p{
+    color: #9d9d9d;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 80%;
+    margin-top: 20px;
+}
+
+footer ul{
+    list-style: none;
+    margin-top: -20px;
+}
+
+
+.ul-nav-links li{
+    display: inline-block;
+    margin-right: 20px;
+    float: left;
+    
+}
+
+.ul-nav-social li{
+    display: inline-block;
+    margin-right: 30px;
+    float: right;
+}
+
+.ul-nav-social li:first-child{
+     margin-right: 5px;
+}
+
+.ul-nav-links li a:link,
+.ul-nav-links li a:visited{
+    text-decoration: none;
+    color: #9d9d9d;
+    border: 0;
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.ul-nav-links li a:hover{
+    color: #c3c3c3;
+}
+
+
+.ul-nav-social li a:link,
+.ul-nav-social li a:visited{
+    text-decoration: none;
+    color: #9d9d9d;
+    border: 0;
+    font-size: 120%;
+}
+
+.ion-social-facebook:hover{
+    color: #3100fd;
+}
+.ion-social-twitter:hover{
+    color: #59bbf8;
+}
+.ion-social-googleplus:hover{
+    color: #fc0000;
+}
+.ion-social-instagram:hover{
+    color: #217411;
+}
+
+/*---------------------------------------------*/
+/*----------------ANIMATION-------------------*/
+
+.js--wp-1,
+.js--wp-2 {
+    /* while effect is disable I want the container doesn't appear*/
+    opacity: 0;
+}
+
+.js--wp-1 .animated, 
+.js--wp-2 .animated{
+    /* after it be animated , after I add a class to it by waypoint, I want the container appear*/
+    opacity: 1;
+}
+

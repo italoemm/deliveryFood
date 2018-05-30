@@ -1,0 +1,186 @@
+/* Small tablets to 1200px but I put 1300 */
+
+@media only screen and (max-height: 420px){
+        height: 100%;
+}
+
+@media only screen and (max-width: 1200px){
+        .row{padding: 0 2px;}
+
+}
+
+
+
+/* Small tablets to big tables : from 768px to 1023px */
+@media only screen and (max-width: 1023px){
+    
+   body{ 
+    font-size: 17.5px; 
+}
+    
+    
+   .UlNav-main li:first-child{ 
+    margin-left: 0;
+}
+    
+    
+    section{ 
+    padding: 50px 0;
+}
+    
+    .long-copy{
+    width: 80%;
+    margin-left: 10%;  /* basically I'm pushing 15 porcentage from left size of window*/
+}
+
+    
+   .section-features i{   
+    margin-right: 25px;
+}
+
+
+     .steps-box:first-child{
+    margin-top: 30px;
+}   
+  
+    .steps-box:last-child{
+    margin-top: 30px;
+}
+    
+    
+    .work-steps:last-of-type{
+    margin-bottom: 70px;  
+}
+    
+    .btn-app img{
+    margin-right: 5px;
+    margin-left: 10px;
+}
+    .btn-app img:last-child{
+    margin-left: 7px;
+}
+
+    .box{
+    padding: 0;
+    margin-left: 5px;
+}
+    .cities-box{
+    width: 105%;
+}
+    .citie  s-box i{
+        margin-right: 0;
+}
+    
+
+/* Small phones to small tables : from 481px to 797px */
+@media only screen and (max-width: 767px){
+    
+    .logo{
+    height: 80px;
+    width: auto;
+}
+    
+    body{ 
+    font-size: 16px; 
+}
+    .row{
+        padding: 0 5%;
+        display: block;
+    }
+    
+    
+    .col{                       /* remember when I'm using "col span-1-of-4 box" inside of a row of 100px I'm splintting it into 25px, So when I'm override with 100% , I'm say that for each collumn I wanna use  all width for each column */
+     width: 100%;
+     margin: 5px 0;
+}
+    
+       section{ 
+    padding: 50px 0;
+}
+    
+    .long-copy{
+    width: 95%;
+    margin: 2.5%;
+}
+    
+    .app-screen{
+    width: 35%;
+}
+    .steps-box:first-child{ /* step that is image*/
+    text-align: center;
+}
+        
+    h2:after{
+  margin-left: 38%;
+}
+
+    h2{
+  font-size: 150%;
+}
+    h1{
+  font-size: 200%;
+} 
+    
+    .UlNav-main{
+   margin: 50px 0 50px 30px;
+   width: 70%;;
+} 
+    .UlNav-main li{
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-top: 5px;
+        
+} 
+
+    .section-contact form {
+    width: 90%;
+    margin: auto 5%;
+    }
+    
+    .col-bt-header{
+        width: 200px;
+    }
+    
+/* small phones : from 0 to 480px*/
+@media only screen and (max-width: 480px){
+    
+     .logo{
+    height: 60px;
+    width: auto;
+}
+    
+    body{ 
+    font-size: 15px; 
+}
+    .nav-480px{
+     display: inline-block;
+        }
+
+    .UlNav-main { 
+    display: none; /*I set none cause I wanna start not appearing nothing*/
+    margin: 50px 0 0px 20px;
+    float: left;
+    width: auto;
+
+} 
+    .UlNav-main li{ 
+    display: block;
+} 
+    
+.UlNav-main li a:link,
+.UlNav-main li a:visited {
+    display: block;
+    font-size: 90% ;
+    padding: 2px;
+    border: 0;
+}
+    
+
+}
+    
+@media only screen and (max-width: 414px){
+  
+    .col-bt-header:last-of-type{
+    padding: 10px 0 40px 0 ;
+}
+
